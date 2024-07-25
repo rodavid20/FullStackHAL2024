@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Area Demo</title>
+    <style>
+              .box
+                  {
+                      padding: 1em;
+                      border-style: solid;
+                      background-color: azure;
+                      text-align: center;
+                  }
+
+              /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) {
+        .container
+              { 
+                  grid-template-rows: 1fr 1fr 4fr 1fr 1fr;                
+                  grid-template-areas: 'header header header'
+                      'menu menu menu'
+                      'main main main'
+                      'right right right'
+                      'footer footer footer';
+
+              }
+
+          }
+
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+        .container
+              { 
+                  grid-template-rows: 1fr 1fr 4fr 1fr 1fr;                
+                  grid-template-areas: 'header header header'
+                      'menu menu menu'
+                      'main main main'
+                      'right right right'
+                      'footer footer footer';
+
+              }
+
+
+      }
+
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        .container
+              { 
+                  grid-template-rows: 1fr 4fr 1fr 1fr;                
+                  grid-template-areas: 'header header header'
+                      'menu main main'
+                      'menu right right'
+                      'menu footer footer';
+
+              }
+
+      }
+
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        .container
+              {  
+                    grid-template-rows: 1fr 4fr 1fr;               
+                  grid-template-areas: 'header header header'
+                      'menu main right'
+                      'menu footer footer';
+
+              }
+            }
+
+
+              
+            .container
+              {
+                  height: 100vh;
+                  display: grid;
+                  gap: 1em;
+                  
+                  
+              }
+
+              .header
+              {
+                  grid-area: header;
+              }
+              .menu
+              {
+                  grid-area: menu;
+              }
+              .main
+              {
+                  grid-area: main;
+              }
+              .right
+              {
+                  grid-area: right;
+              }
+              .footer
+              {
+                  grid-area: footer;
+              }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box header">Header</div>
+      <div class="box menu">Menu</div>
+      <div class="box main">Main</div>
+      <div class="box right">Right</div>
+      <div class="box footer">Footer</div>
+    </div>
+  </body>
+</html>

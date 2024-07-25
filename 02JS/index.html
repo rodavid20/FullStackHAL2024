@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/index.js"></script>
+    <style>
+        .headerClass {
+          color: red !important;  
+          font-style: italic;
+        }
+        div > p {
+            color: green;        
+        }
+        ::selection {
+            color:aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Direct Child of div</p>
+        <span>
+            <p>Grand Child of div</p>
+        </span>
+    </div>
+
+    <p id="header" class="headerClass"></p>
+    <p>Another Para</p>
+    <p>Another Para</p>
+    <div class="headerClass">aaa</div>
+    <div class="headerClass" 
+        style="color:black">another div</div>
+    <form action="" onsubmit="return validate()">
+        <input type="text" id="txtName" name="txtName">
+        <input type="submit" value="Submit">
+    </form>
+    <button onclick="updateHeader()">
+        Click Here</button>
+    <script>
+        document.getElementById("header").innerText="Default header";
+        //setInterval(updateHeader, 2000);
+    </script>
+</body>
+</html>

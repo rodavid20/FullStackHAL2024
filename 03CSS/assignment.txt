@@ -1,0 +1,7 @@
+You have an HTML structure with a div element with the class box, a p element with the class text, and an h1 element with the class title. Write the CSS to style these elements as follows:
+The div with the class box should have a width of 300px, a height of 200px, a lightgreen background color, 20px of padding, a solid lightblue border of 5px, and 15px of margin.
+The p element with the class text should have a font size of 16px.
+The h1 element with the class title should have a font size of 24px and a maroon color.
+Style any p element that is a direct child of a div element to have italic text.
+Change the color of the a elements inside the div to green when hovered over.
+Style the first line of any p element with the class text to be bold.

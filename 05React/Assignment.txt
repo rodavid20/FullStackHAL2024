@@ -1,0 +1,17 @@
+Create a simple React application to display a list of favorite movies. The application should include the following features:
+
+Create and Nest Components: Create a parent component called MovieApp and a child component called MovieList.
+
+Writing Markup with JSX: Use JSX to structure the HTML within the components.
+
+Adding Styles: Apply some basic CSS styles to the components.
+
+Displaying Data: Display a list of movies using an array of movie objects. Each movie object should have a title and a release year.
+
+Conditional Rendering: Display a message "No movies to display" if the movie list is empty.
+
+Rendering Lists: Render the list of movies using the map function.
+
+Responding to Events: Add a button to each movie entry that allows the user to remove the movie from the list.
+
+Updating the Screen: Ensure the screen updates automatically when a movie is removed.

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Demo</title>
+    <style>
+        .box 
+        {
+            padding: 1em;
+            border-style: solid;
+            background-color: azure;
+        }
+        .container
+        {
+            height: 100vh;
+            display: flex;
+            /* flex-direction: row; */
+            justify-content: center;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+        .item3 
+        {
+            align-self: center;
+            flex: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box item1">Item1</div>
+        <div class="box item2">Item2</div>
+        <div class="box item3">Item3</div>
+    </div>
+</body>
+</html>

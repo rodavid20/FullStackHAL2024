@@ -1,8 +1,10 @@
-let todos = [
-    {id: 1, title: 'Get Milk', priority: 'high'},
-    {id: 2, title: 'Get Chocolate', priority: 'medium'},
-    {id: 3, title: 'Get Paper', priority: 'low'}
-];
+let todos = [];
+
+//onload read todos from localstorage
+window.onload = function() {
+    todos = JSON.parse(localStorage.getItem('todos')) || [];
+    render();
+}
 
 function render() {
     const todoList = document.getElementById('todoList');
@@ -62,7 +64,13 @@ function deleteTodo(event){
     todos = todos.filter((todo) => {
         return (todo.id == idToDelete) ? false : true;
     });
+    saveTodos();
     render();
+}
+
+//function to save todos to localstorage
+function saveTodos() {
+    localStorage.setItem('todos', JSON.stringify(todos));
 }
 
 function clearTodo() {
@@ -73,7 +81,7 @@ function clearTodo() {
 }
 
 function addTodo() {
-    const todoId = document.getElementById('todo-id').value;
+    let todoId = document.getElementById('todo-id').value;
     const todoTitle = document.getElementById('todo-title').value;
     const todoPriority = document.getElementById('todo-priority').value;
     let todo;
@@ -88,7 +96,6 @@ function addTodo() {
         todo = {id: todoId, title: todoTitle, priority: todoPriority};
         todos.push(todo);
     }    
+    saveTodos();
     render();
 }
-
-render();
